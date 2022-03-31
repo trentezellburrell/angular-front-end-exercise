@@ -1,0 +1,39 @@
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()" novalidate>
+    <div>
+        <mat-form-field>
+            <input matInput type="text" formControlName="name" placeholder="Name" required name="name">
+            <mat-error>
+                Name is required
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="email" formControlName="email" placeholder="Email" required name="email">
+            <mat-error>
+                Email is required
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput formControlName="password" type="password" required #password placeholder="Password"
+                name="password" />
+
+            <mat-error>
+                Password is required
+            </mat-error>
+
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <textarea formControlName="bio" matInput placeholder="Bio"></textarea>
+        </mat-form-field>
+    </div>
+
+    <button>Register</button>
+</form>
